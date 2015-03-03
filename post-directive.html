@@ -1,0 +1,7 @@
+<div class="list-group" id="scroll-perfect">
+    <a ng-repeat="post in pstCtrl.posts" href="{{post.url}}" targe="_blank" style="background-image: url('{{post.image}}')" class="list-group-item heighted">
+        <h4 class="spacer text-white list-group-item-heading">{{post.title | limitTo : 100}}</h4>
+        <div class="spacer"></div>
+        <blockquote class="spacer text-white list-group-item-text">{{post.body | limitTo : 150}}</blockquote>
+    </a>
+</div>
