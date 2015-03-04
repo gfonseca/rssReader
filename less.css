@@ -25,12 +25,31 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
     font-size: 80%;
 }
 
-#scroll-perfect{
-    height: 600px;
+.no_under_line_hover:hover{
+    text-decoration:none;
+}
 
+.no_under_line{
+     text-decoration:none;
+}
+
+.glyphicon.editbutton:hover{
+    opacity: 1;
+}
+
+.glyphicon.editbutton{
+    left: 2%;
+    top: 2%;
+    opacity: 0.48;
+    position: fixed;
+    color: deepskyblue;
+    font-size: 2.0em;
 }
 
 .main-warp{
  width: 350px;
+}
 
+.pointer-cursor{
+    cursor: pointer;
 }

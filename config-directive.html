@@ -1,0 +1,21 @@
+
+
+<div class="row">
+	<a class="btn btn-link glyphicon glyphicon-hand-left" href="index.html"> back</a>
+</div>	
+<div class="row list-group">
+	<form ng-submit="cfgCtrl.saveSource()" role="form" class="list-group-item">
+		<h4>Add new source</h4>
+		<div class="input-group">
+			<input ng-model="cfgCtrl.new_source.url" placeholder="New source" type="url" class="form-control" />
+			<i ng-click="cfgCtrl.saveSource()" class="pointer-cursor glyphicon glyphicon-plus input-group-addon"></i>
+		</div>
+	</form>
+    <img class="centered" width="30" src="images/pre.gif" ng-hide="cfgCtrl.dataLoaded" />
+    <div ng-repeat="(id, source) in cfgCtrl.sources|filter: cfgCtrl.isvalid" class="list-group-item" ng-show="source.url">
+	    <img class="pull-left" ng-src="{{source.icon}}"/>
+	    <span class="">{{cfgCtrl.limitStr(source.url, 40)}}</span>
+	    <em ng-click="cfgCtrl.removeSource(id)" class="pointer-cursor pull-right glyphicon glyphicon-remove"></em>
+    </div>  
+</div>
+
